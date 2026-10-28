@@ -1,0 +1,20 @@
+HEALTH-ME-INFRASTRUCTURE/
+├── health-me-frontend/           # [HOST 1: Ej. GitHub Pages, Vercel, Netlify]
+│   ├── public/                   # Archivos estáticos y favicon
+│   ├── src/                      # HTML, CSS y JavaScript puro
+│   │   ├── assets/               # Estilos y scripts
+│   │   └── views/                # Vistas de usuario (user.html, etc.)
+│   └── package.json
+│
+├── health-me-backend-net/        # [HOST 2: Ej. Azure, Render, AWS App Runner]
+│   ├── Controllers/              # Controladores de la API en C#
+│   ├── Models/                   # Entidades de datos
+│   └── Program.cs
+│
+├── health-me-backend-php/        # [HOST 2 o HOST 3: Ej. Hostinger, cPanel, Heroku]
+│   ├── api/                      # Endpoints o servicios desarrollados en PHP
+│   └── config/                   # Conexión a MySQL
+│
+└── database/                     # [HOST 3: Proveedor de Base de Datos MySQL (Ej. Clever Cloud, Railway, AWS RDS)]
+    ├── migrations/               # Scripts SQL iniciales
+    └── backups/                  # Respaldos de la base de datos

@@ -1,0 +1,17 @@
+# Redirección personalizada de páginas de error hacia GitHub Pages
+ErrorDocument 403 https://lucaromano-int.github.io/HEALTH-ME/src/views/error403.html
+ErrorDocument 404 https://lucaromano-int.github.io/HEALTH-MO/src/views/error404.html
+ErrorDocument 500 https://lucaromano-int.github.io/HEALTH-ME/src/views/error500.html
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "https://lucaromano-int.github.io"
+    Header set Access-Control-Allow-Credentials "true"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, X-Requested-With"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^(.*)$ $1 [R=204,L]
+</IfModule>
