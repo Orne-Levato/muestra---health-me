@@ -1,0 +1,25 @@
+HEALTH-ME en XAMPP (local)
+==========================
+
+1) Copiá las DOS carpetas de "htdocs" dentro de C:\xampp\htdocs\
+      health-me_backend-php   (reemplaza la que ya tenés)
+      health-me_frontend      (nueva)
+
+2) Abrí el Panel de XAMPP y iniciá  Apache  y  MySQL.
+
+3) Importá la base de datos (una sola vez):
+   - Abrí http://localhost/phpmyadmin  -> pestaña "Importar"
+     -> elegí  database/setup_local.sql  -> "Importar".
+   (Crea la base "healthme" con todas las tablas.)
+
+4) Abrí en el navegador:   http://localhost/health-me_frontend/index.html
+
+Notas
+- MySQL de XAMPP: usuario root SIN contraseña. Si le pusiste una, editá
+  health-me_backend-php/config/conexion.php.
+- Usá siempre http://localhost/... (no 127.0.0.1 ni abrir el .html con doble clic).
+- Para ser administrador: registrate en la web y en phpMyAdmin ejecutá
+    UPDATE usuario SET nivel='administrador' WHERE email='TU_CORREO';
+  y volvé a iniciar sesión.
+- Recuperar contraseña: no se envía mail; el link aparece en
+  C:\xampp\php\logs\php_error_log  (buscá "LINK RECUPERACION").
